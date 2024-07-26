@@ -1,4 +1,41 @@
-# React Library CRA Template
+# JS Math Utils
+This library contains mathematical utilities for JavaScript development.
+
+The functions are not exported as default, so you can import them in one of the following ways:
+```
+// ES6
+import { functionName } from '@ptolemy2002/js-math-utils';
+// CommonJS
+const { functionName } = require('@ptolemy2002/js-math-utils');
+```
+
+## Functions
+The following functions are available in the library:
+
+### clamp
+#### Description
+Clamps a number between a minimum and maximum value.
+
+#### Parameters
+- `value` (Number): The value to be clamped.
+- `min` (Number): The minimum value.
+- `max` (Number): The maximum value.
+
+#### Returns
+Number - The clamped value.
+
+### wrapNumber
+#### Description
+Wraps a number between a minimum and maximum value, non-inclusive on the maximum side (so `min - 1` gets converted to `max - 1` and `max` gets converted to `min`).
+
+#### Parameters
+- `n` (Number): The number to be wrapped.
+- `min` (Number): The minimum value.
+- `max` (Number): The maximum value.
+
+#### Returns
+Number - The wrapped value.
+
 ## Meta
 This is a React Library Created by Ptolemy2002's [cra-template-react-library](https://www.npmjs.com/package/@ptolemy2002/cra-template-react-library) template in combination with [create-react-app](https://www.npmjs.com/package/create-react-app). It contains methods of building and publishing your library to npm.
 For now, the library makes use of React 18 and does not use TypeScript.
