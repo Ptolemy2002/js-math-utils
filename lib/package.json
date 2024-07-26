@@ -24,7 +24,7 @@
         "url": "https://github.com/Ptolemy2002/js-math-utils",
         "directory": "lib"
     },
-    "description": "Example of a React library",
+    "description": "JavaScript math utilities",
     "license": "ISC",
     "peerDependencies": {
         "@ptolemy2002/js-utils": "^1.0.1"
