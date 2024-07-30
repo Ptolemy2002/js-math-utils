@@ -6,7 +6,7 @@
         "index.js"
     ],
     "scripts": {
-        "build": "esbuild src/index.js --bundle --format=cjs --outfile=index.js --external:@ptolemy2002/js-utils",
+        "build": "esbuild src/index.js --bundle --format=cjs --outfile=index.js",
         "postinstall": "npx typesync",
         "uninstall": "bash ./scripts/uninstall.sh",
         "reinstall": "bash ./scripts/reinstall.sh",
@@ -26,10 +26,9 @@
     },
     "description": "JavaScript math utilities",
     "license": "ISC",
-    "peerDependencies": {
-        "@ptolemy2002/js-utils": "^1.0.1"
-    },
+    "peerDependencies": {},
     "devDependencies": {
+        "@ptolemy2002/js-utils": "^1.0.1",
         "esbuild": "^0.23.0"
     }
 }
