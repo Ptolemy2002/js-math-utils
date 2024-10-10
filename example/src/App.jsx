@@ -44,7 +44,7 @@ function App() {
 
             {
                 !error && <div className="mt-3">
-                    <p>Clamped number: {clamp(number, min, max)}</p>
+                    <p>Clamped number: {clamp(number, {min, max})}</p>
                     <p>Wrapped number: {wrapNumber(number, min, max)}</p>
                 </div>
             }

@@ -2,7 +2,7 @@
 This library contains mathematical utilities for JavaScript development.
 
 The functions are not exported as default, so you can import them in one of the following ways:
-```
+```javascript
 // ES6
 import { functionName } from '@ptolemy2002/js-math-utils';
 // CommonJS
