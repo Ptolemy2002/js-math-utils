@@ -1,4 +1,4 @@
-type ClampOptions = {
+export type ClampOptions = {
     min?: number;
     max?: number;
 };

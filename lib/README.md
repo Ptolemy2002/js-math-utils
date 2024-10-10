@@ -9,6 +9,14 @@ import { functionName } from '@ptolemy2002/js-math-utils';
 const { functionName } = require('@ptolemy2002/js-math-utils');
 ```
 
+## Type Reference
+```typescript
+type ClampOptions = {
+    min?: number;
+    max?: number;
+};
+```
+
 ## Functions
 The following functions are available in the library:
 
@@ -17,27 +25,25 @@ The following functions are available in the library:
 Clamps a number between a minimum and maximum value.
 
 #### Parameters
-- `value` (Number): The value to be clamped.
-- `min` (Number): The minimum value.
-- `max` (Number): The maximum value.
+- `value` (`number`): The value to be clamped.
+- `args` - An object containing the following properties:
+  - `min` (`number?`): The minimum value. If not specified, the value is not clamped on the minimum side.
+  - `max` (`number?`): The maximum value. If not specified, the value is not clamped on the maximum side.
 
 #### Returns
-Number - The clamped value.
+`number` - The clamped value.
 
 ### wrapNumber
 #### Description
 Wraps a number between a minimum and maximum value, non-inclusive on the maximum side (so `min - 1` gets converted to `max - 1` and `max` gets converted to `min`).
 
 #### Parameters
-- `n` (Number): The number to be wrapped.
-- `min` (Number): The minimum value.
-- `max` (Number): The maximum value.
+- `n` (`number`): The number to be wrapped.
+- `min` (`number`): The minimum value.
+- `max` (`number`): The maximum value.
 
 #### Returns
-Number - The wrapped value.
-
-## Meta
-This is a React Library Created by Ptolemy2002's [cra-template-react-library](https://www.npmjs.com/package/@ptolemy2002/cra-template-react-library) template in combination with [create-react-app](https://www.npmjs.com/package/create-react-app). However, it does not actually depend on React - it has been modified to work only with my own utility library. It contains methods of building and publishing your library to npm.
+`number` - The wrapped value.
 
 ## Peer Dependencies
 This project does not have any peer dependencies (they are all bundled with the library), so it should work out of the box.
