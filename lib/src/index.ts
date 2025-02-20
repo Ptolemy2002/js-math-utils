@@ -10,15 +10,6 @@ export function clamp(value: number, {min=null, max=null}: ClampOptions = {}): n
 }
 
 export function wrapNumber(n: number, min: number, max: number): number {
-    const range = max - min;
-    if (n === 0) return max - min;
-    
-    return (
-        (n - range) % range === 0 ?
-            min
-        : n >= min ?
-            min + (n - min) % range
-                :
-            max + (n - min) % range
-    );
+    const range = max - min + 1;
+    return (n - min + range) % range + min;
 }
