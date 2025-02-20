@@ -35,7 +35,7 @@ Clamps a number between a minimum and maximum value.
 
 ### wrapNumber
 #### Description
-Wraps a number between a minimum and maximum value, non-inclusive on the maximum side (so `min - 1` gets converted to `max - 1` and `max` gets converted to `min`).
+Wraps a number between a minimum and maximum value, inclusive on the maximum side (so `min - 1` gets converted to `max` and `max + 1` gets converted to `min`).
 
 #### Parameters
 - `n` (`number`): The number to be wrapped.
