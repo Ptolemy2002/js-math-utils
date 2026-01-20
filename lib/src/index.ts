@@ -25,6 +25,11 @@ export function wrapNumber(value: number, min: number, max: number): number {
     
     // Normalize the value by shifting it relative to min
     const normalizedValue = value - min;
+
+    if (rangeSize === 1) {
+        // Special case: range size of 1 means only two values (min and max)
+        return normalizedValue % 2 === 0 ? min : max;
+    }
     
     // Calculate the wrapped position within the range
     // Use modulo to find where the value falls in the repeating pattern
@@ -39,7 +44,7 @@ export function wrapNumber(value: number, min: number, max: number): number {
     // If wrappedValue is 0 and the value approaches from the left,
     // we need to return the max value so that we can remain
     // inclusive of the max boundary
-    if (wrappedValue === 0 && value > max) {
+    if (wrappedValue === 0 && value < max) {
         return max;
     }
 
